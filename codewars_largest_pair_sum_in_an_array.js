@@ -8,7 +8,13 @@ For example
 Input sequence contains minimum two elements and every element is an integer.
 */
 
-function largestPairSum(numbers)
-{
-  //TODO: Write your Code here
+const largestPairSum = (numbers) => {
+  let largest;
+  for(let i = 0; i < numbers.length; i++) {
+    if(numbers[i] + numbers[i + 1] > largest || largest === undefined) {
+      largest = numbers[i] + numbers[i + 1];
+    }
+  }
+
+  return largest
 }
